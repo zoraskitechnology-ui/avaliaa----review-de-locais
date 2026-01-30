@@ -1,5 +1,5 @@
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = '/api';
 
 export const getPlaceSuggestions = async (category: string, lat: number, lon: number) => {
   const url = `${API_URL}/places/search?category=${encodeURIComponent(category)}&lat=${lat}&lon=${lon}`;

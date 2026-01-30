@@ -18,6 +18,9 @@ async function listModels() {
     }
 }
 
+// Call listModels to avoid unused-function TypeScript error during workspace tsc
+listModels().catch(() => {});
+
 // Fallback using fetch if SDK method is not obvious or fails
 async function listModelsRaw() {
     const key = process.env.GEMINI_API_KEY;

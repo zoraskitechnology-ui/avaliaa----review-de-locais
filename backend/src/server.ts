@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import authRoutes from './routes/auth.js';
-import placesRoutes from './routes/places.js';
-import reviewsRoutes from './routes/reviews.js';
-import { errorHandler } from './middleware/errorHandler.js';
+import authRoutes from './routes/auth';
+import placesRoutes from './routes/places';
+import reviewsRoutes from './routes/reviews';
+import { errorHandler } from './middleware/errorHandler';
 
 dotenv.config();
 
