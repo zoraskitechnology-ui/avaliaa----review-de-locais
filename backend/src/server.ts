@@ -24,6 +24,11 @@ app.get('/api/health', (_req, res) => {
     res.json({ status: 'ok', message: 'AvaliaAí API is running' });
 });
 
+// Root endpoint (useful for quick checks when backend is deployed standalone)
+app.get('/', (_req, res) => {
+    res.send('AvaliaAí backend is running');
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/places', placesRoutes);
