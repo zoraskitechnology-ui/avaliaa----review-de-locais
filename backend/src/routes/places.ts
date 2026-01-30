@@ -1,6 +1,8 @@
 import { Router } from 'express';
-import * as placesController from '../controllers/placesController.js';
-import { authenticate, optionalAuth } from '../middleware/auth.js';
+import * as placesController from '../controllers/placesController';
+import { supabase } from '../config/supabase';
+import { AuthRequest, authenticate, optionalAuth } from '../middleware/auth';
+import * as geminiService from '../services/geminiService';
 
 const router = Router();
 

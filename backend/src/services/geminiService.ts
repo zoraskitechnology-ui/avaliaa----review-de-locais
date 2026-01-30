@@ -1,6 +1,6 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from 'dotenv';
-import type { Review, PlaceSuggestion } from '../types/index.js';
+import type { Review, PlaceSuggestion } from '../types/index';
 
 dotenv.config();
 
@@ -45,7 +45,7 @@ export const getPlaceSuggestions = async (category: string, lat: number, lon: nu
     try {
         const startTime = Date.now();
         const response = await ai.models.generateContent({
-            model: "gemini-3-flash-preview",
+            model: "gemini-1.5-flash",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -81,7 +81,7 @@ export const getPlaceSuggestionsByLocationString = async (category: string, loca
     try {
         const startTime = Date.now();
         const response = await ai.models.generateContent({
-            model: "gemini-3-flash-preview",
+            model: "gemini-1.5-flash",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -112,7 +112,7 @@ export const searchForPlace = async (query: string, lat: number, lon: number): P
     try {
         const startTime = Date.now();
         const response = await ai.models.generateContent({
-            model: "gemini-3-flash-preview",
+            model: "gemini-1.5-flash",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -143,7 +143,7 @@ export const searchForPlaceByLocationString = async (query: string, locationStri
     try {
         const startTime = Date.now();
         const response = await ai.models.generateContent({
-            model: "gemini-3-flash-preview",
+            model: "gemini-1.5-flash",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -177,7 +177,7 @@ export const summarizeReviews = async (reviews: Review[]): Promise<string> => {
         console.log(`[Gemini] Summarizing ${reviews.length} reviews`);
         const startTime = Date.now();
         const response = await ai.models.generateContent({
-            model: "gemini-3-flash-preview",
+            model: "gemini-1.5-flash",
             contents: prompt,
         });
         console.log(`[Gemini] Summary received in ${Date.now() - startTime}ms`);

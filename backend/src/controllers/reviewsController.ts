@@ -1,6 +1,6 @@
 import { Response } from 'express';
-import { supabase } from '../config/supabase.js';
-import { AuthRequest } from '../middleware/auth.js';
+import { supabase } from '../config/supabase';
+import { AuthRequest } from '../middleware/auth';
 
 export const createReview = async (req: AuthRequest, res: Response) => {
     try {

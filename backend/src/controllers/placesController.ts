@@ -1,7 +1,7 @@
 import { Response } from 'express';
-import { supabase } from '../config/supabase.js';
-import { AuthRequest } from '../middleware/auth.js';
-import * as geminiService from '../services/geminiService.js';
+import { supabase } from '../config/supabase';
+import { AuthRequest } from '../middleware/auth';
+import * as geminiService from '../services/geminiService';
 
 // Função auxiliar para calcular distância
 const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
