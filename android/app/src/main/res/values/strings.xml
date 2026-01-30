@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BoraAli</string>
+    <string name="title_activity_main">BoraAli</string>
+    <string name="package_name">com.borali.app</string>
+    <string name="custom_url_scheme">com.borali.app</string>
+</resources>

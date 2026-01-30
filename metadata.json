@@ -1,0 +1,8 @@
+{
+  "name": "BoraAli - Review de Locais",
+  "description": "Um aplicativo para avaliar locais com base na experiência do usuário, como acessibilidade, infraestrutura и custo-benefício, com resumos e sugestões gerados por IA.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
